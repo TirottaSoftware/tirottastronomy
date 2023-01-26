@@ -87,11 +87,11 @@ function Apod() {
                                     <>
                                         <div className='w-full relative'>
                                             <img src={apod.url} alt="apod" className='w-full min-h-[400px]' />
-                                            <div className='w-full absolute bottom-8 right-8 flex items-center justify-end'>
+                                            <div className='w-full absolute bottom-8 right-8 flex flex-col items-end lg:flex-row lg:items-center justify-end'>
                                                 {
                                                     auth
-                                                        ? <button onClick={handleFavourite} className={`mr-4 p-4 border-2 rounded-full ${existing ? "bg-white" : "bg-black bg-opacity-50 hover:bg-white hover:bg-opacity-20"}`}>
-                                                            <FavouriteIcon width={32} height={32} />
+                                                        ? <button onClick={handleFavourite} className={`mr-0 mb-4 lg:mr-4 lg:mb-0 p-4 border-2 rounded-full ${existing ? "bg-white" : "bg-black bg-opacity-50 hover:bg-white hover:bg-opacity-20"}`}>
+                                                            <FavouriteIcon width={16} height={16} />
                                                         </button>
                                                         : ""
                                                 }
