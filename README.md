@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+## **Introduction**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tirottastronomy is a Single-Page Application providing users with quality images of astronomical objects taken and supplied by NASA’s public API’s.
 
-## Available Scripts
+## **Features**
 
-In the project directory, you can run:
+- **APOD** (Astronomy Picture of the day)
+  - A daily astronomy image by NASA, along with some general information about it
+  - Date checker functionality, allowing the user to choose a picture by date
+  - Authenticated users can save an image to their favourites list
+- **Earth**: Landstat 8 imagery of the user’s current location.
+  - Pan and Zoom functionality, allowing the user to drag, zoom the image in and out using the mouse wheel
+- **EPIC (**Earth Polychromatic Imaging Camera)
+  - Providing daily imagery collected by DSCOVR’s Earth Polychromatic Imaging Camera
+  - Ability to select an EPIC image from the available dates
+- **Authentication**
+  - Sign In
+  - Sign Up
+  - Sign Out
+  - Change User’s Email
+  - Retrieve user’s list of favourite APOD images
+  - Remove an image from the user’s favourites
+- **Navigation**
+- **Responsive Design**
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- ReactJS
+- Supabase Auth
+- Supabase Database
+- Node.js
+- TailwindCSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Third Party Dependencies
 
-### `npm test`
+- **`react-redux`**: This library is used to manage the application's state using the Redux pattern. It provides a way to connect React components to the Redux store, allowing for easy access to the state and the ability to dispatch actions. Used to handle global Authentication state in the app.
+- **`redux-persist`**: This library is used to persist the application's state to the browser's local storage. This allows the application to maintain its state even after a page refresh or a complete browser close.
+- **`redux-thunk`**: This library is used to handle asynchronous actions in the Redux store. It allows for the creation of actions that can return a function instead of an object, allowing for easier handling of API calls and other asynchronous operations.
+- **`react-datepicker`**: This library is used to provide a date picker component for the application. It allows users to easily select a date from a calendar view. Used for the APOD and EPIC date picker functionality
+- **`react-zoom-pan-pinch`**: This library is used to provide zoom, pan, and pinch functionality for images in the application. This allows users to easily navigate and explore images in greater detail. Used for the Earth page’s Pan & Zoom Functionality
+- **`axios`**: This library is used to handle HTTP requests in the application. It is used to fetch data from the NASA API and handle other network-related tasks. Used to send HTTP requests to NASA’s API’s
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **Installation**
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+git clone https://github.com/TirottaSoftware/tirottastronomy.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Install the dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+cd tirottastronomy
+npm install
+```
 
-### `npm run eject`
+1. Create a **`.env`** file and set the following environment variables:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+REACT_APP_API_KEY=
+REACT_APP_SUPABASE_ANON_KEY=
+REACT_APP_SUPABASE_URL=
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+npm start
+```
