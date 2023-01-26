@@ -9,8 +9,8 @@ function FavouriteCard({ img, removeFavourite }) {
             </div>
             <p className='w-full text-xl my-4 text-body-gray font-tb font-medium'>{img.title}</p>
             <div className='w-full my-4 flex flex-col items-center'>
-                <Button className='lg:text-xl mb-4 w-full text-center' href={img.imageUrl} target="_blank">Open in New Tab</Button>
-                <Button className='lg:text-xl w-full text-center' onClick={removeFavourite} target="_blank" type='ghost'>Remove from Favourites</Button>
+                <Button external href={img.imageUrl} target="_blank" className='lg:text-xl mb-4 w-full text-center'>Open in New Tab</Button>
+                <Button className='lg:text-xl w-full text-center' onClick={removeFavourite} cta={false}>Remove from Favourites</Button>
             </div>
         </div>
     )

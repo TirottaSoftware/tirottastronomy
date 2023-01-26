@@ -95,7 +95,7 @@ function Apod() {
                                                         </button>
                                                         : ""
                                                 }
-                                                <Button href={apod.url} target="_blank" className=" ">Open in New Tab</Button>
+                                                <Button external href={apod.url} target="_blank">Open in New Tab</Button>
                                             </div>
                                         </div>
                                         <p className='text-xl font-tb text-body-gray mt-2'>{apod.date} by {apod.copyright ? apod.copyright : "Unknown"}</p>
@@ -103,7 +103,7 @@ function Apod() {
                                     :
                                     <div>
                                         <p className='text-xl font-tb text-body-gray'>The requested POTD is of type video. Click the button below to see it.</p>
-                                        <Button href={apod.url} target="_blank" className="inline-block my-4 w-full text-center text-2xl font-tb font-medium">See Video</Button>
+                                        <Button external href={apod.url} target="_blank" className="inline-block my-4 w-full text-center text-2xl font-tb font-medium">See Video</Button>
                                     </div>
                             }
 

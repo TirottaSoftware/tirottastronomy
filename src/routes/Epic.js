@@ -8,6 +8,8 @@ import Subheading from '../components/UI/Subheading';
 import { getEpicObject, getAvailableDates } from '../services/epicService'
 
 import "react-datepicker/dist/react-datepicker.css";
+import { Link } from 'react-router-dom';
+import Button from '../components/UI/Button';
 
 function EpicTest() {
     const [epicObject, setEpicObject] = useState({})
@@ -72,7 +74,7 @@ function EpicTest() {
                         loading ? <LoadingSpinner /> :
                             <div className='w-full relative'>
                                 <img loading='lazy' src={epicObject.imageUrl} alt="apod" className='w-full' />
-                                <a href={epicObject.imageUrl} target="_blank" className=" bg-brand text-white py-4 px-16 my-4 w-full text-center inline-block text-2xl font-tb font-medium">Open Image in New Tab</a>
+                                <Button href={epicObject.imageUrl} external target="_blank" className="my-4 w-full inline-block text-center">Open Image in New Tab</Button>
                             </div>
                     }
                 </div>

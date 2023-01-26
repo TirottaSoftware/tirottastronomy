@@ -27,7 +27,6 @@ function Profile() {
             })
     }, [])
 
-
     return (
         <div>
             <Heading className='mt-8'>Welcome back, {auth.user.email.toString().split('@')[0]}</Heading>
