@@ -4,12 +4,11 @@ import DatePicker from "react-datepicker";
 import LoadingSpinner from '../components/UI/LoadingSpinner';
 import Heading from '../components/UI/Heading';
 import Subheading from '../components/UI/Subheading';
+import Button from '../components/UI/Button';
 
 import { getEpicObject, getAvailableDates } from '../services/epicService'
 
 import "react-datepicker/dist/react-datepicker.css";
-import { Link } from 'react-router-dom';
-import Button from '../components/UI/Button';
 
 function EpicTest() {
     const [epicObject, setEpicObject] = useState({})
@@ -47,8 +46,8 @@ function EpicTest() {
 
     return (
         <>
-            <div className='mt-[5%] flex items-start'>
-                <div className='w-1/2 mr-16'>
+            <div className='mt-[5%] flex flex-col items-start lg:flex-row'>
+                <div className='w-full lg:w-1/2 lg:mr-16'>
                     <Heading>EPIC</Heading>
                     <Subheading>Date: {loading ? "" : selected.toISOString().split("T")[0]}</Subheading>
                     <p className='text-xl font-tb text-body-gray'>Imagery collected by DSCOVR's Earth Polychromatic Imaging Camera (EPIC) instrument. Uniquely positioned at the Earth-Sun Lagrange point, EPIC provides full disc imagery of the Earth and captures unique perspectives of certain astronomical events such as lunar transits using a 2048x2048 pixel CCD (Charge Coupled Device) detector coupled to a 30-cm aperture Cassegrain telescope.</p>
@@ -69,7 +68,7 @@ function EpicTest() {
                             </div>
                     }
                 </div>
-                <div className='w-1/2 grid place-items-center'>
+                <div className='w-full lg:w-1/2 grid place-items-center'>
                     {
                         loading ? <LoadingSpinner /> :
                             <div className='w-full relative'>
