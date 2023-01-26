@@ -12,7 +12,7 @@ Tirottastronomy is a Single-Page Application providing users with quality images
   - Authenticated users can save an image to their favourites list
 - **Earth**: Landstat 8 imagery of the user’s current location.
   - Pan and Zoom functionality, allowing the user to drag, zoom the image in and out using the mouse wheel
-- **EPIC (**Earth Polychromatic Imaging Camera)
+- **EPIC** (Earth Polychromatic Imaging Camera)
   - Providing daily imagery collected by DSCOVR’s Earth Polychromatic Imaging Camera
   - Ability to select an EPIC image from the available dates
 - **Authentication**
