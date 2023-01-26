@@ -15,7 +15,6 @@ function MobileNavbar({ enabled, toggle }) {
         toggle()
         logout()
             .then(() => {
-                console.log("Logged out.")
                 navigate('/')
                 dispatch(signOut());
             })

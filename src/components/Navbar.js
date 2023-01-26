@@ -15,13 +15,13 @@ function Navbar() {
     const [sidebar, setSidebar] = useState(false);
     const auth = useSelector((state) => state.auth);
 
+
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
     const handleLogout = async () => {
         logout()
             .then(() => {
-                console.log("Logged out.")
                 navigate('/')
                 dispatch(signOut());
             })

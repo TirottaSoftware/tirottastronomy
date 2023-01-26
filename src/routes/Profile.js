@@ -23,7 +23,6 @@ function Profile() {
         // Get the user's list of favourite images and update the state accordingly
         getFavourites(auth.user)
             .then(data => {
-                console.log(data)
                 setFavourites(data)
             })
     }, [])
