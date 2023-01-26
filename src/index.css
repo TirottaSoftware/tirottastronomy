@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    @font-face {
+        font-family: 'Halvar';
+        font-weight: 700;
+        src: url(./assets/fonts/HalvarBreit-Bd.ttf) format("woff");
+    }
+    @font-face {
+        font-family: 'Halvar';
+        font-weight: 400;
+        src: url(./assets/fonts/HalvarBreit-Rg.ttf) format("woff");
+    }
+    @font-face {
+        font-family: 'Thicccboi';
+        font-weight: 500;
+        src: url(./assets/fonts/THICCCBOI-Medium.ttf) format("woff");
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;   
+    background-color: #f1f1f1;
+    background-image: radial-gradient(rgba(210, 114, 0, 0.75) 1px, transparent 0) ;
+    background-size: 64px 64px;
+    background-position: -20px -20px;
+}
+.react-datepicker__day--selected, .react-datepicker__day--keyboard-selected{
+    background: #D27200 !important;
+}
