@@ -16,7 +16,8 @@ function Profile() {
 
     const removeFavourite = (img) => {
         // Remove the image from the user's favourites and reload the page to apply the changes to the DOM
-        removeFromFavourites({ url: img.imageUrl }, auth.user).then(() => navigate(0))
+        removeFromFavourites({ url: img.imageUrl }, auth.user)
+            .then(() => navigate(0))
     }
 
     useEffect(() => {
